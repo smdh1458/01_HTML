@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>연습문제4</title>
+  </head>
+  <body>
+    <div>
+      <fieldset>
+        <legend>납품자 정보</legend>
+        <ol>
+          <li>
+            <label>납품자명:</label>
+            <input type="text" name="name" />
+            <br /><br />
+          </li>
+          <li>
+            <label>email:</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="answer@naver.com"
+            /><br /><br />
+          </li>
+          <li>
+            <label>홈페이지:</label>
+            <input type="text" name="homepage" value="http//" />
+            <br /><br />
+          </li>
+          <li>
+            <label>지역:</label>
+            <select name="location">
+              <option>부산</option>
+              <option>서울</option>
+              <option>대구</option>
+            </select>
+          </li>
+        </ol>
+      </fieldset>
+
+      <fieldset>
+        <legend>납품 정보</legend>
+        <br />
+        <ul>
+          <li>
+            <label> 상품명:</label>
+            <input type="text" name="productName" />
+            <br /><br />
+          </li>
+          <li>
+            <label> 납품수량 :</label>
+            <input type="text" name="amount" placeholder="최소값 100" />
+            <br /><br />
+          </li>
+          <li>
+            <label> 납품등급 :</label>
+            <input type="range" name="grade" min="1" max="5" value="3" />
+            <br /><br />
+          </li>
+          <li>
+            <label> 기타사항 :</label>
+            <textarea name="etc" rows="5" cols="20" maxlength="100"> </textarea>
+            <br /><br />
+          </li>
+        </ul>
+      </fieldset>
+      <br />
+      <input type="button" value="send message" />
+    </div>
+  </body>
+</html>
