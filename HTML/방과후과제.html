@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>치킨가게 회원가입</title>
+    <style>
+      div {
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin: 0 auto;
+      }
+      input {
+        border: 1px solid darkblue;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+      img {
+        width: 150px;
+      }
+
+      button {
+        background-color: tomato;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>맛있어 치킨가게 회원가입</h1>
+      <img src="main-image.jpg" />
+      <br /><br />
+      <form>
+        <label>이름 : </label>
+        <input type="text" name="user-name" placeholder="홍길동" />
+        <br /><br />
+        <label>아이디 : </label>
+        <input type="text" name="user-id" placeholder="chickenlover" />
+        <br /><br />
+        <label>비밀번호 :</label>
+        <input type="password" name="user-pw" placeholder="*******" />
+        <br /><br />
+        <label>이메일 :</label>
+        <input
+          type="email"
+          name="user-email"
+          placeholder="example@chicken.com"
+        />
+        <br /><br />
+        <label>좋아하는 치킨 :</label>
+        <input
+          type="text"
+          name="favorite-chicken"
+          placeholder="양념,후라이드 등"
+        />
+        <br /><br />
+        <button>회원가입하기</button>
+      </form>
+    </div>
+  </body>
+</html>
