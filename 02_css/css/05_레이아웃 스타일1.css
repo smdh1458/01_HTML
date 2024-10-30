@@ -1,0 +1,35 @@
+.block {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  color: white;
+  /* display: block;
+          div는 애초에 block 형태이기 때문에 변화가 없음
+      */
+  display: inline;
+}
+
+.영역1 {
+  background-color: red;
+}
+
+.영역2 {
+  background-color: orange;
+}
+
+.영역3 {
+  background-color: yellow;
+}
+
+.영역4 {
+  background-color: green;
+}
+
+.영역5 {
+  background-color: blue;
+}
+
+.영역1 {
+  background-color: black;
+  padding: 10px;
+}
