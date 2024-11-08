@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>241108 주말실습과제</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 200px;
+        border: 5px solid gray;
+        border-radius: 20px;
+        padding: 40px;
+      }
+      .box {
+        width: 500px;
+        margin: 10px;
+        font-weight: bold;
+        justify-content: space-between;
+      }
+      .main,
+      .main2 {
+        font-size: 30px;
+      }
+      .main2 {
+        display: inline-block;
+        text-align: end;
+      }
+
+      button {
+        width: 80px;
+        height: 40px;
+        border-radius: 4px;
+        font-size: 20px;
+        background-color: white;
+      }
+      .btn1 {
+        color: green;
+        border: 3px solid green;
+      }
+
+      .btn2 {
+        color: red;
+        border: 3px solid red;
+      }
+
+      .btn1:hover {
+        background-color: green;
+        color: white;
+      }
+
+      .btn2:hover {
+        background-color: red;
+        color: white;
+      }
+      hr {
+        border: 1px solid gray;
+        margin: 20px;
+      }
+
+      #amount {
+        border: 0px;
+        border-bottom: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="container">
+      <div class="box">
+        <label class="main">잔액:</label>
+        <label class="main2"><span class="balance"></span>원</label>
+        <hr />
+
+        <label for="amount">금액: </label>
+        <input type="text" id="amount" />
+        <span>원</span>
+        <hr />
+        <button class="btn1" onclick="input()">입금</button>
+        <button class="btn2" onclick="output()">출금</button>
+      </div>
+    </form>
+    <!-- if문안에 if문활용-->
+  </body>
+</html>
