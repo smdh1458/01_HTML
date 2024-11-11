@@ -63,3 +63,69 @@ function check4() {
   // 담고 sum으로 c의 모든 값을 출력
   alert(sum);
 }
+
+/*
+while문 기본 구조
+while (조건) {
+  //반복할 코드
+}
+
+*/
+
+// while1 기능의 버튼을 누르면 1부터 5까지 숫자를 더한 값을 출력
+function while1() {
+  let num = 1; //let 변할 수 있는 변수명을 작성 const 변할수 없는 상수명 작성
+
+  while (num <= 5) {
+    alert("num의 숫자값은 " + num + "입니다.");
+    //계속 num의 값이 1이기 때문에 무한 반복
+    // num숫자를 1씩 증가시켜서 숫자가 5가 되면 while문 종료하기
+    num++; //num=num+1;
+  }
+}
+
+function while2() {
+  let abc = 1;
+  let sum = 0;
+  while (abc <= 10) {
+    sum += abc;
+    console.log("abc의 값: " + abc);
+    console.log("합계: " + sum);
+    abc++;
+  }
+}
+
+function while3() {
+  let abc = 1;
+  let sum = 0;
+  while (abc <= 10) {
+    sum += abc;
+    console.log("abc의 값: " + abc);
+    console.log("합계: " + sum);
+    if (abc == 5) {
+      break;
+    }
+    abc++;
+  }
+}
+
+//while4 라는 지역변수 안에서만 사용하는 변수명을 설정할 경우에는
+//{}안에 변수명을 작성
+function while4() {
+  let xyz = 0;
+  while (xyz <= 20) {
+    xyz++;
+    console.log(xyz);
+  }
+}
+
+function while5() {
+  let i = 5;
+  while (i <= 20) {
+    console.log("숫자는" + i + "입니다.");
+    i++;
+    if (i == 16) {
+      break;
+    }
+  }
+}

@@ -62,23 +62,54 @@
         border: 0px;
         border-bottom: 1px solid gray;
       }
+
+      input[type="text"] {
+        width: 80%;
+      }
+      .box1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn {
+        display: flex;
+        justify-content: space-evenly;
+      }
     </style>
   </head>
   <body>
     <form class="container">
       <div class="box">
-        <label class="main">잔액:</label>
-        <label class="main2"><span class="balance"></span>원</label>
+        <div class="box1">
+          <label class="main">잔액:</label>
+          <label class="main2"><span id="balance"></span>원</label>
+        </div>
         <hr />
-
         <label for="amount">금액: </label>
         <input type="text" id="amount" />
         <span>원</span>
         <hr />
-        <button class="btn1" onclick="input()">입금</button>
-        <button class="btn2" onclick="output()">출금</button>
+        <div class="btn">
+          <button class="btn1" onclick="input()">입금</button>
+          <button class="btn2" onclick="output()">출금</button>
+        </div>
       </div>
     </form>
     <!-- if문안에 if문활용-->
+    <script>
+      const input = document.getElementById("amount");
+      const result = document.getElementById("balance");
+      let sum = 10000;
+      result.innerText = sum;
+
+      function input() {
+        sum += Number(input.value);
+        result.innerText = sum;
+      }
+
+      function output() {
+        sum -= input.value;
+        result.innerText = sum;
+      }
+    </script>
   </body>
 </html>

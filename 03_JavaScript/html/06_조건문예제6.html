@@ -68,16 +68,22 @@
       output.innerText = balance; //초기 금액인 만원을 설정
       function 출금기능() {
         const amount1 = document.getElementById("amount").value;
+        const password = prompt("비밀번호를 입력하세요.");
         let sum = balance - amount1;
-        if (amount1 == 0) {
-          alert("금액을 입력해주세요.");
-        } else if (sum < 0) {
-          alert("잔액이 부족하여 출금할 수 없습니다.");
-          amount.value = "";
+        if (password == "1234") {
+          if (amount1 == 0) {
+            alert("금액을 입력해주세요.");
+          } else if (sum < 0) {
+            // 출금할 금액이 원액보다 적을경우
+            alert("잔액이 부족하여 출금할 수 없습니다.");
+            amount.value = "";
+          } else {
+            balance -= amount.value;
+            output.innerText = balance;
+            amount.value = "";
+          }
         } else {
-          balance -= amount.value;
-          output.innerText = balance;
-          amount.value = "";
+          alert("비밀번호가일치하지 않습니다. 다시 입력해주세요.");
         }
       }
 
