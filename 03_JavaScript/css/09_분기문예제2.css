@@ -1,0 +1,21 @@
+.container {
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 5px;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: lightslategray;
+}
