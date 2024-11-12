@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과일 선택하기</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: none;
+      }
+      #result {
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        margin-top: 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      input {
+        padding: 5px;
+        font-size: 20px;
+        margin: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>과일 선택하기</h1>
+    <p>1에서 5까지 숫자를 입력하세요!</p>
+    <input type="text" id="fruitNumber" placeholder="1-5 입력해주세요!" />
+    <button onclick="selectFruit()">선택하기</button>
+    <div id="result"></div>
+    <script>
+      const fruit = ["사과", "오렌지", "바나나", "체리", "망고"];
+      function selectFruit() {
+        const number = document.getElementById("fruitNumber").value;
+        const result = document.getElementById("result");
+        if (number !== 0) {
+          switch (number) {
+            case "1":
+              result.innerText = "선택한 과일:" + fruit[0];
+
+            case "2":
+              result.innerText = `선택한 과일: ${fruit["2"]}`;
+
+            case "3":
+              result.innerText = `선택한 과일: ${fruit["3"]}`;
+
+            case "4":
+              result.innerText = `선택한 과일: ${fruit["4"]}`;
+
+            case "5":
+              result.innerText = `선택한 과일: ${fruit["5"]}`;
+          }
+        } else {
+          result.innerText = "숫자를 입력해주세요~";
+        }
+      }
+    </script>
+  </body>
+</html>
