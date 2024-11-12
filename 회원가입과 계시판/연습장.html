@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습장</title>
+    <style>
+      #hint {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="회원가입성공.html">
+      <label>연습1</label>
+      <input type="text" required onfocus="showhint()" onblur="nonehint()" />
+      <br />
+      <p id="hint">영문자 대문자써라</p>
+      <button>동작</button>
+    </form>
+    <script>
+      function showhint() {
+        const hint = document.getElementById("hint");
+        hint.style.display = "block";
+      }
+
+      function nonehint() {
+        const hint = document.getElementById("hint");
+        hint.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
