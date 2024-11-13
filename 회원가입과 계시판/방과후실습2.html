@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>방과후실습2</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #terms-form {
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2,
+      h3 {
+        color: #ff8c00;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      label {
+        /*display: block;*/
+        margin: 10px 0;
+        font-size: 14px;
+        color: #d2691e;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: aliceblue;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #ffa500;
+      }
+
+      #name-div,
+      #name-div2 {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #d2691e;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="terms-form">
+      <h2>회원가입 약관 및 취미 선택</h2>
+      <input type="checkbox" id="maincCheck1" name="checker" />
+      <label for="maincCheck1">서비스 이용 약관 동의</label>
+      <br />
+      <input type="checkbox" id="mainCheck2" name="checker" />
+      <label for="mainCheck2">개인정보 수집 및 이용 동의</label>
+      <br />
+      <input type="checkbox" id="mainCheck3" name="checker" />
+      <label for="mainCheck3">마케팅 정보 수신 동의(선택)</label>
+
+      <h2>취미 선택</h2>
+      <input type="checkbox" id="book" name="hobby" />
+      <label for="book">독서</label>
+      <br />
+      <input type="checkbox" id="sports" name="hobby" />
+      <label for="sports">운동</label>
+      <br />
+      <input type="checkbox" id="cook" name="hobby" />
+      <label for="cook">요리</label>
+      <br />
+      <input type="checkbox" id="travel" name="hobby" />
+      <label for="travel">여행</label>
+
+      <button onclick="확인하기()">확인하기</button>
+      <p id="name-div"></p>
+      <p id="name-div2"></p>
+    </form>
+    <script>
+      function 확인하기() {
+        const mainCheck = document.getElementsByName("checker");
+        const hobby = document.getElementsByName("hobby");
+        const result1 = document.getElementById("name-div");
+        const result2 = document.getElementById("name-div2");
+        let str = "";
+        let count = 0;
+        if (mainCheck[0].checked && mainCheck[1].checked) {
+          for (let j = 0; j < hobby.length; j++) {
+            if (hobby[j].checked) {
+              str += hobby[j].value + " ";
+              count++;
+            }
+          }
+          result1.innerText = str;
+          result2.innerText = `선택한 취미 개수: ${count}`;
+        } else {
+          alert("모든 필수 약관에 동의해주세요.");
+        }
+      }
+    </script>
+  </body>
+</html>

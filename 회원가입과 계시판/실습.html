@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+      #title {
+        color: blue;
+        text-align: center;
+      }
+
+      .text {
+        color: black;
+        text-align: center;
+      }
+
+      .highlighted {
+        color: red;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: blue;
+      }
+
+      button {
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요, 반가워요</h1>
+    <button onclick="changeColor()">제목 색상 변경</button>
+
+    <hr />
+
+    <h2 class="text">텍스트 1</h2>
+    <h2 class="text">텍스트 2</h2>
+    <h2 class="text">텍스트 3</h2>
+    <button onclick="changeText()">텍스트 강조</button>
+
+    <hr />
+
+    <label>이름을 입력하세요.</label>
+    <input type="text" name="username" placeholder="이름" />
+    <button onclick="testName()">이름 표시</button>
+    <p>당신의 이름: <span id="nameOutput"></span></p>
+
+    <script>
+      function changeColor() {
+        const title = document.getElementById("title");
+        title.style.color = "green";
+      }
+
+      function changeText() {
+        const text1 = document.getElementsByClassName("text");
+        const highlight = document.querySelector(".highlighted");
+        for (let i = 0; i < text1.length; i++) {
+          text1[i].style = highlight; // 여긴 잘 모르겠습니다.
+        }
+      }
+
+      function testName() {
+        const userName = document.getElementsByName("username");
+        const result = document.getElementById("nameOutput");
+        const abc = userName[0].value;
+        result.innerHTML = abc;
+      }
+    </script>
+  </body>
+</html>
