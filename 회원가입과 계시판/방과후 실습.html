@@ -52,25 +52,29 @@
       function selectFruit() {
         const number = document.getElementById("fruitNumber").value;
         const result = document.getElementById("result");
-        if (number !== 0) {
+        if (number >= 1 && number <= 5) {
           switch (number) {
             case "1":
               result.innerText = "선택한 과일:" + fruit[0];
+              break;
 
             case "2":
-              result.innerText = `선택한 과일: ${fruit["2"]}`;
-
+              result.innerText = "선택한 과일:" + fruit[1];
+              break;
             case "3":
-              result.innerText = `선택한 과일: ${fruit["3"]}`;
+              result.innerText = "선택한 과일:" + fruit[2];
+              break;
 
             case "4":
-              result.innerText = `선택한 과일: ${fruit["4"]}`;
+              result.innerText = "선택한 과일:" + fruit[3];
+              break;
 
             case "5":
-              result.innerText = `선택한 과일: ${fruit["5"]}`;
+              result.innerText = "선택한 과일:" + fruit[4];
+              break;
           }
         } else {
-          result.innerText = "숫자를 입력해주세요~";
+          result.innerText = "숫자를 입력해주세요!";
         }
       }
     </script>

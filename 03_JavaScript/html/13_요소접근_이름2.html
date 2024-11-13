@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이름 속성을 활용해서 checkbox radio 활용하기</title>
+  </head>
+  <body>
+    <h1>이름 속성을 활용해서 checkbox radio 활용하기</h1>
+    <input type="checkbox" name="hobby" id="music" value="음악감상" />
+    <label for="music">음악감상</label>
+    <input type="checkbox" name="hobby" id="sports" value="운동" />
+    <label for="sports">운동</label>
+    <input type="checkbox" name="hobby" id="books" value="독서" />
+    <label for="books">독서</label>
+    <input type="checkbox" name="hobby" id="trip" value="여행" />
+    <label for="trip">여행</label>
+    <button onclick="checkHobby()">확인</button>
+    <p id="result"></p>
+    <script>
+      function checkHobby() {
+        const hobby = document.getElementsByName("hobby");
+        const result = document.getElementById("result");
+        let str = "";
+        let count = 0;
+
+        for (let i = 0; i < hobby.length; i++) {
+          if (hobby[i].checked) {
+            str += hobby[i].value + " ";
+            count++;
+          }
+        }
+        const inText = `선택한 취미명은 : ${str} <br> 개수는 ${count}입니다.`;
+        if (count > 0) {
+          result.innerHTML = inText;
+        } else {
+          // 1보다 아래 0 -1 -2 ....
+          result.innerHTML = `선택된 취미가 없습니다.`;
+        }
+        //삼항 연산자로 표현
+
+        //const inText2 = (count >0) ?  (result.innerHTML = inText) : (result.innerHTML = `선택된 취미가 없습니다.`);
+      }
+    </script>
+  </body>
+</html>
