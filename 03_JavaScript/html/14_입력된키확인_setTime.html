@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인예제3.css" />
+  </head>
+  <body onkeydown="키누름(event)" onkeyup="키안누름(event)">
+    <div class="container">
+      <div class="key-box">
+        <div class="key">A</div>
+        <div class="key">B</div>
+        <div class="key">C</div>
+        <div class="key">D</div>
+        <div class="key">E</div>
+      </div>
+    </div>
+    <script>
+      /*
+        문자열.toLowerCase() : 영어를 모두 소문자로 변경
+        문자열.toUpperCase() : 영어를 모두 대문자로 변경
+        */
+      const key = document.querySelectorAll(".key");
+      function 키누름(event) {
+        let count;
+        switch (event.key.toLowerCase()) {
+          case "a":
+            count = 0;
+            break;
+          case "b":
+            count = 1;
+            break;
+          case "c":
+            count = 2;
+            break;
+          case "d":
+            count = 3;
+            break;
+          case "e":
+            count = 4;
+            break;
+          default:
+            return; //함수 종료
+        }
+        key[count].style.backgroundColor = "#2a9d8f";
+        key[count].style.color = "white";
+        setTimeout(() => {
+          key[count].style.backgroundColor = "white";
+          key[count].style.color = "#333";
+        }, 300);
+      }
+      /*
+      function 키안누름(event) {
+        let count;
+        switch (event.key.toLowerCase()) {
+          case "a":
+            count = 0;
+            break;
+          case "b":
+            count = 1;
+            break;
+          case "c":
+            count = 2;
+            break;
+          case "d":
+            count = 3;
+            break;
+          case "e":
+            count = 4;
+            break;
+          default:
+            return; //함수 종료
+        }
+        key[count].style.backgroundColor = "#2a9d8f";
+        key[count].style.color = "white";
+
+        setTimeout(() => {
+          key[count].style.backgroundColor = "white";
+          key[count].style.color = "#333";
+        }, 300);
+      }*/
+    </script>
+  </body>
+</html>
